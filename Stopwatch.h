@@ -1,35 +1,28 @@
-// Stopwatch.h
-
-#include <ctime>
+/*
+	Stopwatch.h
+*/
 
 #ifndef Stopwatch_H_
 #define Stopwatch_H_
 
 class Stopwatch {
 private:
-	time_t start;
-	time_t end;
+	long long begin, end, elapsed;
 
 public:
 	Stopwatch();
-	Stopwatch(time_t start);
-
-	time_t getStart();
-	void setStart(time_t start);
-	time_t getEnd();
-	void setEnd(time_t end);
-
-	Stopwatch operator+(const Stopwatch & a) const;
-	Stopwatch operator-(const Stopwatch & a) const;
-	Stopwatch operator*(const Stopwatch & a) const;
-	Stopwatch operator/(const Stopwatch & a) const;
-	//Stopwatch operator%(const Stopwatch & a) const; 
-
-	friend Stopwatch operator+(double a, const Stopwatch & b);
-	friend Stopwatch operator-(double a, const Stopwatch & b);
-	friend Stopwatch operator*(double a, const Stopwatch & b);
-	friend Stopwatch operator/(double a, const Stopwatch & b);
-	//friend Stopwatch operator%(double a, const Stopwatch & b);
-
+	Stopwatch(long long elapsed);
+	~Stopwatch();
+	long long getBegin();
+	void setBegin();
+	long long getEnd();
+	void setEnd();
+	long long getElapsed();
+	void start();
+	void pause();
+	void unpause();
+	void stop();
+	void printTime();
+	void writeTime();
 };
 #endif
