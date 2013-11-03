@@ -8,11 +8,11 @@
 #include "Stopwatch.h"
 
 Stopwatch::Stopwatch() {
-	initial = begin = end = elapsed = 0;
+	state = initial = begin = end = elapsed = 0;
 }
 
 Stopwatch::Stopwatch(long long elapsed) {
-	initial = begin = end = 0;
+	state = initial = begin = end = 0;
 	(*this).elapsed = elapsed;
 }
 
@@ -35,7 +35,11 @@ void Stopwatch::setEnd(long long end) {
 }
 
 long long Stopwatch::getElapsed() {
-	return begin - end;
+	return elapsed;
+}
+
+void Stopwatch::setElapsed(short elapsed) {
+	(*this).elapsed = elapsed;
 }
 
 void Stopwatch::start() {

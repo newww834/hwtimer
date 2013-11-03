@@ -7,6 +7,7 @@
 
 class Stopwatch {
 private:
+	short state;
 	long long begin, end, elapsed;
 
 public:
@@ -18,6 +19,7 @@ public:
 	long long getEnd();
 	void setEnd();
 	long long getElapsed();
+	void setElapsed(short elapsed);
 	void start();
 	void pause();
 	void unpause();
