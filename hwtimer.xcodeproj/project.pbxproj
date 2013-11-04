@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		F7267F711828661000D7E459 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7267F701828661000D7E459 /* main.cpp */; };
 		F7267F731828661000D7E459 /* hwtimer.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = F7267F721828661000D7E459 /* hwtimer.1 */; };
+		F7267F81182866D300D7E459 /* Alarm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7267F79182866D300D7E459 /* Alarm.cpp */; };
+		F7267F82182866D300D7E459 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = F7267F7C182866D300D7E459 /* Makefile */; };
+		F7267F83182866D300D7E459 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7267F7E182866D300D7E459 /* Timer.cpp */; };
+		F7267F84182866D300D7E459 /* timers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7267F80182866D300D7E459 /* timers.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +32,14 @@
 		F7267F6D1828661000D7E459 /* hwtimer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = hwtimer; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7267F701828661000D7E459 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		F7267F721828661000D7E459 /* hwtimer.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = hwtimer.1; sourceTree = "<group>"; };
+		F7267F79182866D300D7E459 /* Alarm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Alarm.cpp; sourceTree = "<group>"; };
+		F7267F7A182866D300D7E459 /* Alarm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alarm.h; sourceTree = "<group>"; };
+		F7267F7B182866D300D7E459 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		F7267F7C182866D300D7E459 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		F7267F7D182866D300D7E459 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		F7267F7E182866D300D7E459 /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
+		F7267F7F182866D300D7E459 /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
+		F7267F80182866D300D7E459 /* timers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = timers.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +73,14 @@
 			isa = PBXGroup;
 			children = (
 				F7267F701828661000D7E459 /* main.cpp */,
+				F7267F79182866D300D7E459 /* Alarm.cpp */,
+				F7267F7A182866D300D7E459 /* Alarm.h */,
+				F7267F7B182866D300D7E459 /* LICENSE */,
+				F7267F7C182866D300D7E459 /* Makefile */,
+				F7267F7D182866D300D7E459 /* README.md */,
+				F7267F7E182866D300D7E459 /* Timer.cpp */,
+				F7267F7F182866D300D7E459 /* Timer.h */,
+				F7267F80182866D300D7E459 /* timers.cpp */,
 				F7267F721828661000D7E459 /* hwtimer.1 */,
 			);
 			path = hwtimer;
@@ -117,7 +137,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7267F82182866D300D7E459 /* Makefile in Sources */,
 				F7267F711828661000D7E459 /* main.cpp in Sources */,
+				F7267F81182866D300D7E459 /* Alarm.cpp in Sources */,
+				F7267F84182866D300D7E459 /* timers.cpp in Sources */,
+				F7267F83182866D300D7E459 /* Timer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
