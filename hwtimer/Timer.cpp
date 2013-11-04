@@ -10,7 +10,7 @@ using namespace std::chrono;
 using namespace timers;
 
 Timer::Timer(milliseconds millis) {
-	state = 0;
+	state = -1;
 	this->d = millis;
 }
 
@@ -27,12 +27,18 @@ void Timer::start() {
 
 void Timer::pause() {
   
+  state = 0;
+  
 }
 
 void Timer::unpause() {
+  state = 0;
   
 }
 
 void Timer::stop() {
+  state = -1;
+  this->d = ;
+  
   
 }
