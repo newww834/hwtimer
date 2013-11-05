@@ -13,7 +13,7 @@ using namespace std::chrono;
 namespace timers {
 	class Alarm {
 	private:
-    short state;
+    int state;
 		time_point<steady_clock> later;
 
 	public:

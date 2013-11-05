@@ -13,13 +13,14 @@ using namespace std::chrono;
 namespace timers {
 	class Timer {
 	private:
-		short state;
+		int state;
 		milliseconds left;
     time_point<steady_clock> past;
 
 	public:
-		Timer(const milliseconds millis);
+    Timer(const milliseconds millis);
 		~Timer();
+    int getState();
 		milliseconds getTimeLeft();
 		milliseconds start();
 		milliseconds pause();

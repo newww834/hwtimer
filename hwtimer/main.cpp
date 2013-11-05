@@ -13,6 +13,7 @@
 #include <iostream>
 #include <iomanip>
 #include <chrono>
+#include <unistd.h>
 #include "Timer.h"
 
 #define millisInSecond (1000)
@@ -44,10 +45,16 @@ void scanargs(char *arg) {
   }
 }
 
-int main(int argc, const char * argv[])
-{
-
-  // insert code here...
-  std::cout << "Hello, World!\n";
+int main(int argc, const char * argv[]) {
+  milliseconds placeholder;
+  milliseconds millis(50000);
+  Timer a = *new Timer(millis);
+  a.start();
+  while (a.isTimeLeft()) {
+    sleep(1);
+    placeholder = a.pause();
+    cout << placeholder.count() << endl;
+  }
+  
   return 0;
 }

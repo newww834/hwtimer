@@ -17,6 +17,10 @@ Timer::Timer(const milliseconds millis) {
 
 Timer::~Timer() {}
 
+int Timer::getState() {
+  return state;
+}
+
 milliseconds Timer::getTimeLeft() {
 	return left;
 }
