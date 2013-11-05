@@ -36,7 +36,7 @@
 		F7267F7A182866D300D7E459 /* Alarm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alarm.h; sourceTree = "<group>"; };
 		F7267F7B182866D300D7E459 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		F7267F7C182866D300D7E459 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
-		F7267F7D182866D300D7E459 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		F7267F7D182866D300D7E459 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = hwtimer/README.md; sourceTree = "<group>"; };
 		F7267F7E182866D300D7E459 /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
 		F7267F7F182866D300D7E459 /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
 		F7267F80182866D300D7E459 /* timers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = timers.cpp; sourceTree = "<group>"; };
@@ -56,6 +56,7 @@
 		F7267F641828661000D7E459 = {
 			isa = PBXGroup;
 			children = (
+				F7267F7D182866D300D7E459 /* README.md */,
 				F7267F6F1828661000D7E459 /* hwtimer */,
 				F7267F6E1828661000D7E459 /* Products */,
 			);
@@ -77,7 +78,6 @@
 				F7267F7A182866D300D7E459 /* Alarm.h */,
 				F7267F7B182866D300D7E459 /* LICENSE */,
 				F7267F7C182866D300D7E459 /* Makefile */,
-				F7267F7D182866D300D7E459 /* README.md */,
 				F7267F7E182866D300D7E459 /* Timer.cpp */,
 				F7267F7F182866D300D7E459 /* Timer.h */,
 				F7267F80182866D300D7E459 /* timers.cpp */,
