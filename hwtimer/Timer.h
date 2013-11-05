@@ -16,6 +16,7 @@ namespace timers {
 		int state;
 		milliseconds left;
     time_point<steady_clock> past;
+    steady_clock now;
 
 	public:
     Timer(const milliseconds millis);

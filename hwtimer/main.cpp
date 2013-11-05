@@ -46,14 +46,17 @@ void scanargs(char *arg) {
 }
 
 int main(int argc, const char * argv[]) {
+  // clock data
+  
+  
   milliseconds placeholder;
-  milliseconds millis(50000);
+  milliseconds millis(10000);
   Timer a = *new Timer(millis);
-  a.start();
   while (a.isTimeLeft()) {
-    sleep(1);
-    placeholder = a.pause();
-    cout << placeholder.count() << endl;
+    a.start();
+    usleep(1000*1000);
+    cout << a.getTimeLeft().count() << endl;
+
   }
   
   return 0;

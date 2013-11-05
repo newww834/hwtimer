@@ -13,6 +13,7 @@ using namespace timers;
 Timer::Timer(const milliseconds millis) {
 	state = -1;
 	left = millis;
+  past = now.now();
 }
 
 Timer::~Timer() {}
@@ -31,18 +32,13 @@ milliseconds Timer::getTimeLeft() {
  */
 milliseconds Timer::start() {
 	state = 1;
-	past = steady_clock::now();
+	past = now.now();
   return left;
 }
 
 milliseconds Timer::pause() {
-  if (!this->isTimeLeft()) { // no more time left
-    fprintf(stderr, "Timer exceeded its original time\n");
-    this->stop();
-  } else {
-    left = duration_cast<milliseconds>(steady_clock::now() - past);
-    state = 0;
-  }
+  left -= duration_cast<milliseconds>(now.now() - past);
+  state = 0;
   return left;
 }
 
@@ -53,9 +49,10 @@ milliseconds Timer::pause() {
  */
 milliseconds Timer::stop() {
   state = -1;
-  return duration<milliseconds>::zero();
+  milliseconds zero(0);
+  return zero;
 }
 
 bool Timer::isTimeLeft() {
-  return ((left > steady_clock::now() - past) ? true : false);
+  return ((left > now.now() - past) ? true : false);
 }

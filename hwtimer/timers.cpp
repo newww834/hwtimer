@@ -13,4 +13,8 @@ namespace timers {
   }
   
 	combineDuration
+  
+  getClockPrecision
+  
+  getClockIs_steady
 }
