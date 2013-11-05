@@ -24,6 +24,26 @@ using namespace std;
 using namespace std::chrono;
 using namespace timers;
 
+bool logging = 0, found;
+
+void scanargs(char *arg) {
+  if (arg[0] == '-') {
+    while (*(++arg) != '\n') {
+      switch (*arg) {
+        case 'l':
+          found = 1;
+          logging = 1;
+          continue;
+        default:
+          break;
+      }
+    }
+  } else if (found != 1) {
+    fprintf(stderr, "Invalid argument\n");
+    exit(0);
+  }
+}
+
 int main(int argc, const char * argv[])
 {
 

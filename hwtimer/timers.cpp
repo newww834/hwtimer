@@ -1,13 +1,16 @@
 #include <ctime>
 #include <chrono>
 
-namespace timers {
-	onceEveryMilli
-	onceEverySecond
-	onceEveryMinute
-	onceEveryHour
-	onceEveryDay
+using namespace std::chrono;
 
-	segmentDuration
+namespace timers {
+	onceEvery(duration d, fnptr) {
+    
+  }
+
+	segmentDuration(duration d) {
+    
+  }
+  
 	combineDuration
 }

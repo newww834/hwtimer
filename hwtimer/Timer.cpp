@@ -2,6 +2,7 @@
 	Timer.cpp
 */
 
+#include <iostream>
 #include <ctime>
 #include <chrono>
 #include "Timer.h"
@@ -9,36 +10,48 @@
 using namespace std::chrono;
 using namespace timers;
 
-Timer::Timer(milliseconds millis) {
+Timer::Timer(const milliseconds millis) {
 	state = -1;
-	this->d = millis;
+	left = millis;
 }
 
 Timer::~Timer() {}
 
-milliseconds Timer::getDuration() {
-	return this->d;
+milliseconds Timer::getTimeLeft() {
+	return left;
 }
 
-void Timer::start() {
+/*
+ * Starts or unpauses timer
+ * Returns amount of time left
+ */
+milliseconds Timer::start() {
 	state = 1;
-	
+	past = steady_clock::now();
+  return left;
 }
 
-void Timer::pause() {
-  
-  state = 0;
-  
+milliseconds Timer::pause() {
+  if (!this->isTimeLeft()) { // no more time left
+    fprintf(stderr, "Timer exceeded its original time\n");
+    this->stop();
+  } else {
+    left = duration_cast<milliseconds>(steady_clock::now() - past);
+    state = 0;
+  }
+  return left;
 }
 
-void Timer::unpause() {
-  state = 0;
-  
-}
-
-void Timer::stop() {
+/*
+ * Either user stops, when time runs out, or time is exceeded (error)
+ * Keeps left as it is
+ * Returns 0 milliseconds
+ */
+milliseconds Timer::stop() {
   state = -1;
-  this->d = ;
-  
-  
+  return duration<milliseconds>::zero();
+}
+
+bool Timer::isTimeLeft() {
+  return ((left > steady_clock::now() - past) ? true : false);
 }

@@ -14,16 +14,17 @@ namespace timers {
 	class Timer {
 	private:
 		short state;
-		milliseconds d;
+		milliseconds left;
+    time_point<steady_clock> past;
 
 	public:
-		Timer(milliseconds millis);
+		Timer(const milliseconds millis);
 		~Timer();
-		milliseconds getDuration();
-		void start();
-		void pause();
-		void unpause();
-		void stop();
+		milliseconds getTimeLeft();
+		milliseconds start();
+		milliseconds pause();
+		milliseconds stop();
+    bool isTimeLeft();
 	};
 }
 #endif
